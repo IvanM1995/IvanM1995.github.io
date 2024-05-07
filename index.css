@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedan-SC&display=swap");
+*{
+    box-sizing: border-box;
+    font-style: normal;
+    font-family:'Sedan',serif;
+    font-weight:bold;
+    
+}
+
+body{
+margin: 0;
+padding: 0;
+background-color: #CAA6A6;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.logo-guitar{
+    width: 50px;
+
+}
+
+.navbar{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    padding: 0 30px;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color:#944E63;
+    font-size: 18px;
+    flex-direction:row;
+    width: 100vw; 
+    opacity: 90%;  
+    
+}
+
+body a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight:bold;
+    color: black;
+}
+
+body a:hover{
+    color:white;
+}
+
+.clase-section{
+    
+}
+
+#S1  {                         
+    display: flex;
+    margin: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60vw;
+    min-height: 100vh;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    color:black;
+    background-position: center center;   
+    background-image: url("./Img Proyecto/img7-proyecto.jpg");
+    border-radius: 15px;
+    box-shadow: 15px 15px #944E63;
+
+}
+
+#S2{
+    display: flex;
+    margin: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("./Img Proyecto/img2-proyecto.jpg");
+    width: 60vw;
+    min-height: 100vh;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    color:black;
+    border-radius: 15px;   
+    box-shadow: 15px 15px #944E63;
+}
+
+.header{
+    background-color: rgba(255, 255, 255, 0.452);
+    width: 100%;
+}
+
+#S3{   
+
+}
+
+
+.carrousel img{
+        width:calc( 100%/4);
+        display:flex;
+        
+
+}
+
+#S4 .carta{
+    display: flex;
+    background-color: #BB8493;      
+    text-align: left; 
+    background-size: cover;
+    width: 80vw;
+    height: 60vh;
+    margin: 25px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 15px 15px #944E63;
+}
+
+#S4 .texto{
+    display: flex;
+    color: #00224D;
+    flex-direction: column;
+    padding: 10px;  
+}
+
+.carta img{
+    height: 700px;
+    width: 450px;
+    object-fit: cover;
+
+}
+
+.form-contacto{
+    width: 500px;
+    padding: 80px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    background-color: #BB8493;
+    border-radius: 15px;
+    box-shadow: 15px 15px  #704264;
+    
+
+}
+
+.form-contacto h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.campos-text{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #00224D;
+}
+
+.button{    
+width: 90%;
+padding: 10px;
+margin: 15px;
+border-radius: 6px;
+border-color: #00224D;
+text-align: center;
+
+}
+
+.textarea-mensaje{
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    border-color: #00224D;
+    border: 2px solid #00224D;
+
+}
