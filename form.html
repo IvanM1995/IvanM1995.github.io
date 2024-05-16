@@ -22,18 +22,18 @@
             <!-- Falta agregar imagen al formulario -->
         </div> 
         <div class="form">
-            <form class="form-contacto" action="" id="formulario">
+            <form class="form-contacto" action="" id="formulario" onsubmit="return validarD()">
                 <h2>Contactanos</h2>
                 <label class="label" for="nombre">Nombre</label>
-                <input class="campos-text" type="text" id="nombre" class="input-nombre">
+                <input class="campos-text" type="text" id="nombre" class="input-nombre" required>
                 <label class="label" for="email">Email</label>
-                <input class="campos-text" type="email" id="email" class="input-email">
+                <input class="campos-text" type="email" id="email" class="input-email" required>
                 <label class="label" for="telefono">Telefono</label>
-                <input class="campos-text" type="telefono" id="telefono" class="input-telefono">
+                <input class="campos-text" type="telefono" id="telefono" class="input-telefono" required>
                 <label class="label" for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensahe" cols="50" rows="5" class="textarea-mensaje"></textarea>
+                <textarea name="mensaje" id="mensaje" cols="50" rows="5" class="textarea-mensaje" required></textarea>
 
-                <button class="button" type="submit">  
+                <button class="button" type="enviar">  
                     <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
                             <svg

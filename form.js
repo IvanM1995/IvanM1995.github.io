@@ -1,58 +1,62 @@
-const nombre = document.getElementById('nombre');
-const email = document.getElementById('email');
-const telefono = document.getElementById('telefono');
-const mensaje = document.getElementsById('mensaje');
+// Agrego una funcion validarD y luego creo las variables con sus respectivos nombres para llamar mis elementos del form
+function validarD(){
+var nombre,email,telefono,mensaje;
+nombre = document.getElementById("nombre").value;
+email = document.getElementById("email").value;
+telefono = document.getElementById("telefono").value;
+mensaje = document.getElementById("mensaje").value;
 
-const form = document.getElementById('formulario');
-let alertas = document.getElementById('alertas');
 
-form.addEventListener('submit', (e) => {
-alertas.innerHTML = '';
-e.prevenDefault();
-let regExp_mail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
-let regExp_num = /^\d{7,14}$/;
-let regExp_nomb = /^[a-zA-Z0-9/_/-]{4,16}$/
-let mostrarAlertas = false;
-if(nombre.value.length<4){
-let p = document.createElement('p');
-p.innerHTML = 'El nombre debe contener al menos 4 caracteres <br>';
-alertas.appendChild(p)
-mostrarAlertas = true;
+
+expresionReg = /\w+@\w+\.+[a-z]/; //Expresion regular para email.
+expresionRegNom = /^\w[a-zA-Z 0-9]{3,14}$/; //Expresion regular para nombre.
+//Validamos los campos
+if(nombre === ""){
+    alert("Todos los campos son obligatorios");
+    return false;
 }
-if(!regExp_mail.test(email.value)){
-let p = document.createElement('p');
-p.innerHTML = ' El email no es valido <br>';
-alertas.appendChild(p);
-mostrarAlertas = true;
-}
-if(regExp_num.test(telefono.value)){
-let p = document.createElement('p');
-p.innerHTML = 'El numero de telefono tiene caracteres no validos<br>';
-alertas.appendChild(p)
-mostrarAlertas = true;
-
+else if(!expresionRegNom.test(nombre)){
+    alert("Solo Se permiten letras a - Z ");
+    return false;
 }
 
-if(telefono.value.length<8){
-    let p = documen.createElemnt('p');
-    p.innerHTML = 'El telefono debe contener almenos 8 digitos<br>';
-    alertas.appendChild(p);
-    mostrarAlertas = true;
+else if(email ===""){
+    alert("Todos los campos son obligatorios");
+    return false;
 }
-
-if(mensaje.value.length<15){
-    let p = document.createElement('p');
-    p.innerHTML = 'El mensaje solo permite 15 caracteres o menos <br>'
-    alertas.appendChild(p);
-    mostrarAlertas = true;
-
+else if(!expresionReg.test(email)){
+alert("El correo ingresado no es valido");
+return false;
 }
-if(!mostrarAlertas){
-    let p = documen.createElement('p');
-    p.innerHTML = 'Gracias por dejar su mensaje !';
-    alertaas.appendChild(p);
-    form.reset();
+else if(telefono ===""){
+    alert(" Todos los campos son obligatorios");
+    return false;
+}
+else if(mensaje === ""){
+    alert("Todos los campos son obligatorio")
+    return false;
+}
+else if(nombre.length>14){
+    alert("El nombre debe contener MAX 14 caracteres");
+    return false;
+}
+else if(isNaN(telefono) || telefono.length>8){
+    alert("Debe ingresar solo numeros y maximo 8 caracteres");
+}
+else if(mensaje.length>50){
+    alert("Maximo 50 caracteres");
+    return false;
+
 }
 
 
-})
+
+}
+
+
+
+
+
+
+
+
