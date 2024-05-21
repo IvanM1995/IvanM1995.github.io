@@ -10,12 +10,11 @@
 body{
 margin: 0;
 padding: 0;
-background-color: #CAA6A6;
+background-color: #7E6363;
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: center; 
 }
-
 .logo-guitar{
     width: 50px;
 
@@ -31,7 +30,7 @@ align-items: center;
     border-bottom: 1px solid black;
     position: sticky;
     top: 0;
-    background-color:#944E63;
+    background-color:#3E3232;
     font-size: 18px;
     flex-direction:row;
     width: 100vw; 
@@ -50,10 +49,6 @@ body a:hover{
     color:white;
 }
 
-.clase-section{
-    
-}
-
 #S1  {                         
     display: flex;
     margin: 25px;
@@ -68,7 +63,7 @@ body a:hover{
     background-position: center center;   
     background-image: url("./Img Proyecto/img7-proyecto.jpg");
     border-radius: 15px;
-    box-shadow: 15px 15px #944E63;
+    box-shadow: 15px 15px #3E3232;
 
 }
 
@@ -85,7 +80,7 @@ body a:hover{
     background-repeat: no-repeat;
     color:black;
     border-radius: 15px;   
-    box-shadow: 15px 15px #944E63;
+    box-shadow: 15px 15px #3E3232;
 }
 
 .header{
@@ -93,36 +88,59 @@ body a:hover{
     width: 100%;
 }
 
-#S3{   
+#S3{
+    background-repeat: no-repeat;
+    display: flex;
+    width: 90vh;
+    display: flex;
+    margin-left: 130px;
+}
+
+.Nservis{
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 35px;
 
 }
 
 
-.carrousel img{
-        width:calc( 100%/4);
-        display:flex;
-        
-
+.carrousel{
+    position: relative;
+    min-height: 800px;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 10px;
+    transition:  .7s ease-in-out;
 }
+
 
 #S4 .carta{
+    object-fit: cover;
+    background-repeat: no-repeat;
     display: flex;
-    background-color: #BB8493;      
+    background-color: #A87C7C;      
     text-align: left; 
     background-size: cover;
-    width: 80vw;
-    height: 60vh;
+    width: 80%;
+    height: 60%;
     margin: 25px;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 15px 15px #944E63;
+    box-shadow: 15px 15px #3E3232;
 }
 
 #S4 .texto{
     display: flex;
     color: #00224D;
     flex-direction: column;
-    padding: 10px;  
+    padding: 10px;
+    
 }
 
 .carta img{
@@ -132,47 +150,146 @@ body a:hover{
 
 }
 
-.form-contacto{
-    width: 500px;
-    padding: 80px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    background-color: #BB8493;
-    border-radius: 15px;
-    box-shadow: 15px 15px  #704264;
-    
-
+.main-form{
+height: 92vh;
+width: 100%;
+display: flex;
 }
 
-.form-contacto h2{
+.videoclip{
+    height: 100%;
+    width: 90%;
+    background-color: black;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.form,form{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7E6363;
+}
+
+
+
+.form h2{
+    color: wheat;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.campos-text{
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    border: 2px solid #00224D;
-}
-
-.button{    
-width: 90%;
-padding: 10px;
-margin: 15px;
-border-radius: 6px;
-border-color: #00224D;
-text-align: center;
-
-}
 
 .textarea-mensaje{
-    width: 100%;
-    border-radius: 5px;
-    padding: 15px;
-    border-color: #00224D;
-    border: 2px solid #00224D;
+    resize: none;
+}
 
+input,textarea{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid wheat;
+    resize: none;
+    margin: 20px 0;
+    height: 2rem;
+    padding-left: 10px;
+}
+
+label{
+    color: wheat;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+
+#alerta{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+button{
+    font-family: inherit;
+    font-size: 20px;
+    background: black;
+    color: wheat;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.flecha1, .flecha2{
+    position: relative;
+    margin-top: 176px;
+    cursor: pointer;
+    
+}
+
+
+button:hover svg{
+    transform:  translate(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover .svg-wrapper{
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover span{
+    transform:  translateX(4em);
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.2em);
+    }
+
+    to {
+        transform: translateY(-0.2em);
+    }
+}
+
+#footer{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,57 +1,72 @@
-// Agrego una funcion validarD y luego creo las variables con sus respectivos nombres para llamar mis elementos del form
-function validarD(){
-var nombre,email,telefono,mensaje;
-nombre = document.getElementById("nombre").value;
-email = document.getElementById("email").value;
-telefono = document.getElementById("telefono").value;
-mensaje = document.getElementById("mensaje").value;
+const nombre = document.getElementById("nombre");
+const email = document.getElementById("email");
+const telefono = document.getElementById("telefono");
+const mensaje = document.getElementById("mensaje");
+
+const formulario = document.getElementById("formulario");
+
+
+let alerta = document.getElementById("alerta");
+
+formulario.addEventListener("submit" , (e)=>{
+alerta.innerHTML = "";
+e.preventDefault();
+let expresionRegEmail = /\w+@\w+\.+[a-z]/; //Expresion regular para email.
+let expresionRegNom = /^\w[a-zA-Z 0-9]{3,14}$/;//expresion regular para nombre.
+let expresionRegTel = /\d[0-9]{0,8}/; //Expresion regular para telefono.
+let mostrarAlertas = false;
+
+if(!expresionRegNom.test(nombre.value)){
+        let p = document.createElement("p");
+        p.innerHTML = "Solo se aceptan letras <br> min 3 a 14 caracteres"
+        alerta.appendChild(p);
+        mostrarAlertas = true ;
+    }
+    if(!expresionRegEmail.test(email.value)){
+        let p = document.createElement("p");
+        p.innerHTML = "El correo ingresado no es valido<br>Asegurese de usar @ ;.com";
+        alerta.appendChild(p);
+        mostrarAlertas = true;
+    }
+    if(!expresionRegTel.test(telefono.value)){
+        let p = document.createElement("p");
+        p.innerHTML = "Caracteres invalidos <br> solo se aceptan numeros"
+        alerta.appendChild(p);
+        mostrarAlertas = true;
+    }
+    if(telefono.value.length<8){
+        let p = document.createElement("p");
+        p.innerHTML = "El numero debe contener 8 caracteres";
+        alerta.appendChild(p);
+        mostrarAlertas = true;
+    }
+    if(mensaje.value.length<20){
+        let p = document.createElement("p");
+        p.innerHTML = "El mensaje debe contener<br>al menos 20 caracteres";
+        alerta.appendChild(p);
+        mostrarAlertas = true;
+    }
+    if(!mostrarAlertas){
+        let p = document.createElement("p");
+        p.innerHTML = "Gracias por enviar su comentario.";
+        alerta.appendChild(p);
+        mostrarAlertas = true;
+        formulario.reset();
+    }
+
+    
 
 
 
-expresionReg = /\w+@\w+\.+[a-z]/; //Expresion regular para email.
-expresionRegNom = /^\w[a-zA-Z 0-9]{3,14}$/; //Expresion regular para nombre.
-//Validamos los campos
-if(nombre === ""){
-    alert("Todos los campos son obligatorios");
-    return false;
-}
-else if(!expresionRegNom.test(nombre)){
-    alert("Solo Se permiten letras a - Z ");
-    return false;
-}
 
-else if(email ===""){
-    alert("Todos los campos son obligatorios");
-    return false;
-}
-else if(!expresionReg.test(email)){
-alert("El correo ingresado no es valido");
-return false;
-}
-else if(telefono ===""){
-    alert(" Todos los campos son obligatorios");
-    return false;
-}
-else if(mensaje === ""){
-    alert("Todos los campos son obligatorio")
-    return false;
-}
-else if(nombre.length>14){
-    alert("El nombre debe contener MAX 14 caracteres");
-    return false;
-}
-else if(isNaN(telefono) || telefono.length>8){
-    alert("Debe ingresar solo numeros y maximo 8 caracteres");
-}
-else if(mensaje.length>50){
-    alert("Maximo 50 caracteres");
-    return false;
-
-}
+})
 
 
 
-}
+
+
+
+
 
 
 

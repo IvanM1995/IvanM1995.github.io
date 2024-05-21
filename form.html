@@ -18,11 +18,11 @@
     </div>
 
     <div class="main-form">
-        <div class="img-form">
-            <!-- Falta agregar imagen al formulario -->
-        </div> 
+        <div class="videoclip">
+            <video src="./ClipProyecto/VideoP.mp4" autoplay loop muted class="video"></video>
+        </div>
         <div class="form">
-            <form class="form-contacto" action="" id="formulario" onsubmit="return validarD()">
+            <form  action="" id="formulario" >
                 <h2>Contactanos</h2>
                 <label class="label" for="nombre">Nombre</label>
                 <input class="campos-text" type="text" id="nombre" class="input-nombre" required>
@@ -33,6 +33,9 @@
                 <label class="label" for="mensaje">Mensaje</label>
                 <textarea name="mensaje" id="mensaje" cols="50" rows="5" class="textarea-mensaje" required></textarea>
 
+                    <div id="alerta">
+
+                    </div>   
                 <button class="button" type="enviar">  
                     <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
