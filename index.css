@@ -92,14 +92,6 @@ body a:hover{
     width: 100%;
 }
 
-#S3{
-    background-repeat: no-repeat;
-    display: flex;
-    width: 90vh;
-    display: flex;
-    margin-left: 130px;
-}
-
 .Nservis{
     padding: 50px;
     align-items: center;
@@ -118,16 +110,20 @@ li{
 }
 
 
-.carrousel{
-    position: relative;
-    min-height: 800px;
-    min-width: 100%;
+.carrousel-section{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+
+}
+
+.carrousel{
+    height: 800px;
+    width: 70%;
     background-repeat: no-repeat;
     object-fit: cover;
     border-radius: 10px;
+    background-size: cover;
 }
 
 
@@ -272,13 +268,9 @@ button svg {
     transition: transform 0.3s ease-in-out;
 }
 
-.flecha1, .flecha2{
-    position: relative;
-    margin-top: 176px;
+.flecha{
     cursor: pointer;
-    
 }
-
 
 button:hover svg{
     transform:  translate(1.2em) rotate(45deg) scale(1.1);
