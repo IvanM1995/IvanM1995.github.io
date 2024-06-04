@@ -131,36 +131,32 @@ li{
     background-size: cover;
 }
 
-
-#S4 .carta{
-    object-fit: cover;
-    background-repeat: no-repeat;
+.flex-container{
     display: flex;
-    background-color: #A87C7C;      
-    text-align: left; 
+    flex-direction: column;
+    flex-flow: column wrap;
+    align-content: center;
+    background-color: #A87C7C; 
     background-size: cover;
-    width: 80%;
-    height: 60%;
+    text-align: center;
+    width: 55%;
+    height: 25%;
     margin: 25px;
     overflow: hidden;
-    border-radius: 20px;
     box-shadow: 15px 15px #3E3232;
+    border-radius: 20px;
+    color: #3E3232;
+    padding: 15px;    
 }
 
-#S4 .texto{
-    display: flex;
-    color: #00224D;
-    flex-direction: column;
-    padding: 10px;
-    
+.texto h3{
+    color: wheat;
+    background-color:#241f1fa1;
+    border-radius: 20px;
+    padding: 18px;
+    margin: 55px;
 }
 
-.carta img{
-    height: 700px;
-    width: 450px;
-    object-fit: cover;
-
-}
 
 .main-form{
 height: 92vh;
