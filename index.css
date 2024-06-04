@@ -24,7 +24,7 @@ align-items: center;
     width: 50px;
 }
 
-.ColorRojo{
+.ColorRojo{ /* Estilo mensajes de validacion*/
     color: red;
     font-size: 17px;
 }

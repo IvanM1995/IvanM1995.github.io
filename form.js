@@ -14,7 +14,7 @@ function limpiarErrores(event){
     const actualHermano = actualInput.nextElementSibling;
 
     if(actualHermano.nodeName == 'SPAN'){
-        actualHermano.remove();
+    actualHermano.remove();
     }
 }
 
@@ -24,56 +24,46 @@ e.preventDefault();
 let expresionRegEmail = /\w+@\w+\.+[a-z]/; //Expresion regular para email.
 let expresionRegNom = /^\w[a-zA-Z 0-9]{3,14}$/;//expresion regular para nombre.
 let expresionRegTel = /\d[0-9]{0,8}/; //Expresion regular para telefono.
-let mostrarAlertas = false;
+let enviado = true;
 
 if(!expresionRegNom.test(nombre.value)){
         const spanError = document.createElement('span');
         spanError.textContent = '*Solo se aceptan letras de 3 a 14 caracteres'
         nombre.insertAdjacentElement("afterend",spanError);
         spanError.className ='ColorRojo';
-        mostrarAlertas = true ;
     }
     if(!expresionRegEmail.test(email.value)){
         const spanError = document.createElement('span');
         spanError.textContent = '*El correo ingresado no es valido. Asegurese de usar @ .com'
         email.insertAdjacentElement("afterend",spanError);
         spanError.className ='ColorRojo';
-        mostrarAlertas = true;
     }
     if(!expresionRegTel.test(telefono.value)){
         const spanError = document.createElement('span');
         spanError.textContent = '*Caracteres invalidos solo se aceptan numeros'
         telefono.insertAdjacentElement("afterend",spanError);
         spanError.className ='ColorRojo';
-        mostrarAlertas = true;
     }
     if(telefono.value.length<8){
         const spanError = document.createElement('span');
         spanError.textContent = '*El num debe contener 8 caracteres'
         telefono.insertAdjacentElement("afterend",spanError);
         spanError.className ='ColorRojo';
-        mostrarAlertas = true;
     }
     if(mensaje.value.length<20){
         const spanError = document.createElement('span');
         spanError.textContent = '*El mensaje debe contener al menos 20 caracteres'
         mensaje.insertAdjacentElement("afterend",spanError);
         spanError.className ='ColorRojo';
-        mostrarAlertas = true;
     }
-    if(!mostrarAlertas){
-        let p = document.createElement("p");
+    if(enviado){
+        let p = document.createElement('p');
         p.innerHTML = "Gracias por enviar su comentario.";
         nombre.value = '';
         email.value = '';
         telefono.value = '';
         mensaje.value = '';
-        formulario.reset();
     }
-
-    
-
-
 
 
 })
