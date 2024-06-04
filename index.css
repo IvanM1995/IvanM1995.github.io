@@ -25,7 +25,7 @@ align-items: center;
 }
 
 .ColorRojo{ /* Estilo mensajes de validacion*/
-    color: red;
+    color:#1b1717f8;
     font-size: 17px;
 }
 
@@ -151,7 +151,7 @@ li{
 
 .texto h3{
     color: wheat;
-    background-color:#241f1fb4;
+    background-color:#241f1fa6;
     border-radius: 20px;
     padding: 18px;
     margin: 55px;
