@@ -24,6 +24,11 @@ align-items: center;
     width: 50px;
 }
 
+.ColorRojo{
+    color: red;
+    font-size: 17px;
+}
+
 .navbar{
     color: black;
     display: flex;

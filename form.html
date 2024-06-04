@@ -25,13 +25,13 @@
             <form  action="" id="formulario" >
                 <h2>Contactanos</h2>
                 <label class="label" for="nombre">Nombre</label>
-                <input class="campos-text" type="text" id="nombre" class="input-nombre" required>
+                <input class="campos-text" type="text" id="nombre" class="input-nombre" onfocus="limpiarErrores(event)" >
                 <label class="label" for="email">Email</label>
-                <input class="campos-text" type="email" id="email" class="input-email" required>
+                <input class="campos-text" type="email" id="email" class="input-email" onfocus="limpiarErrores(event)">
                 <label class="label" for="telefono">Telefono</label>
-                <input class="campos-text" type="telefono" id="telefono" class="input-telefono" required>
+                <input class="campos-text" type="telefono" id="telefono" class="input-telefono" onfocus="limpiarErrores(event)" >
                 <label class="label" for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje" cols="50" rows="5" class="textarea-mensaje" required></textarea>
+                <textarea name="mensaje" id="mensaje" cols="50" rows="5" class="textarea-mensaje" onfocus="limpiarErrores(event)"></textarea>
 
                     <div id="alerta">
 
