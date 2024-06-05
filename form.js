@@ -30,31 +30,31 @@ if(!expresionRegNom.test(nombre.value)){
         const spanError = document.createElement('span');
         spanError.textContent = '*Solo se aceptan letras de 3 a 14 caracteres'
         nombre.insertAdjacentElement("afterend",spanError);
-        spanError.className ='ColorRojo';
+        spanError.className ='Color';
     }
     if(!expresionRegEmail.test(email.value)){
         const spanError = document.createElement('span');
         spanError.textContent = '*El correo ingresado no es valido. Asegurese de usar @ .com'
         email.insertAdjacentElement("afterend",spanError);
-        spanError.className ='ColorRojo';
+        spanError.className ='Color';
     }
     if(!expresionRegTel.test(telefono.value)){
         const spanError = document.createElement('span');
         spanError.textContent = '*Caracteres invalidos solo se aceptan numeros'
         telefono.insertAdjacentElement("afterend",spanError);
-        spanError.className ='ColorRojo';
+        spanError.className ='Color';
     }
     if(telefono.value.length<8){
         const spanError = document.createElement('span');
-        spanError.textContent = '*El num debe contener 8 caracteres'
+        spanError.textContent = '*El num debe contener 8 caracteres '                        
         telefono.insertAdjacentElement("afterend",spanError);
-        spanError.className ='ColorRojo';
+        spanError.className ='Color';
     }
     if(mensaje.value.length<20){
         const spanError = document.createElement('span');
         spanError.textContent = '*El mensaje debe contener al menos 20 caracteres'
         mensaje.insertAdjacentElement("afterend",spanError);
-        spanError.className ='ColorRojo';
+        spanError.className ='Color';
     }
     if(enviado){
         let p = document.createElement('p');
